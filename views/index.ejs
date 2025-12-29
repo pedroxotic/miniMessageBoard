@@ -1,0 +1,14 @@
+<!-- index.ejs -->
+<html>
+  <body>
+   
+        <% messages.forEach(u => { %>
+             <ul>
+            <li> text <%= u.text %></li>
+            <li>name <%= u.user %></li>
+            <li>date <%= u.added %></li>
+            </ul>
+       <% }) %>
+
+  </body>
+</html>
