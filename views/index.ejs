@@ -1,14 +1,20 @@
 <!-- index.ejs -->
 <html>
+
   <body>
    
-        <% messages.forEach(u => { %>
+        <% messages.forEach((u, index) => { %>
              <ul>
             <li> text <%= u.text %></li>
             <li>name <%= u.user %></li>
             <li>date <%= u.added %></li>
             </ul>
-       <% }) %>
+            <a href="/message/<%= index %>" id="open">open</a> 
+            
 
+            
+
+       <% }) %>
+<a href="/new" class="btn">new message</a>
   </body>
 </html>

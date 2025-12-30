@@ -7,8 +7,9 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 const newRouter = require("./routes/newRouter");
-
+const MessageRouter = require("./routes/MessageRouter");
 app.use("/", newRouter);
+app.use("/message", MessageRouter );
 
 app.listen(4000, (error) =>{
 
